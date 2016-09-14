@@ -38,9 +38,9 @@ $('#submit-expense').on('submit', (e) => {
 
 
 // Highlight expenses that match the selected category
-$('#highlight-category').on('change', (e) => {
+$('#category-highlight').on('change', (e) => {
   $('#expenses-data').find('tr').removeClass('highlighted'); // remove any existing highlights
-  const selectedCategory = $(e.currentTarget).val().toLowerCase();
+  const selectedCategory = $(e.currentTarget).val();
   const matches = $('#expenses-data').find(`tr.${selectedCategory}`);
   matches.each((index, match) => {
     $(match).addClass('highlighted');
