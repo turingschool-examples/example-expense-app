@@ -4,10 +4,10 @@ const getExpenses = () => {
     dataType: 'json',
     url: '/expenses',
     success: function (data) {
-      console.log('Expenses returned successfully.', data);
+      console.log('Expenses returned successfully!');
     },
     error: function (error) {
-      console.error('There was some kind of error.', error);
+      console.error('There was some kind of error.');
     }
   });
 };
