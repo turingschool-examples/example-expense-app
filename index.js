@@ -11,7 +11,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Expense Tracker'
-app.locals.expenses = [];
+app.locals.expenses = [
+  { category: 'bills', description: 'Rent', cost: '$1,000' },
+  { category: 'fun', description: 'Beer', cost: '$10,000' },
+  { category: 'transportation', description: 'Metrocard', cost: '$100' },
+];
+
 
 app.get('/', (request, response) => {
   fs.readFile(`${__dirname}/public/index.html`, (err, file) => {
