@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>expenseTracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>expenseTracker</h1>
+    </header>
+    <section id="create-expense">
+      <h2>Submit New Expense:</h2>
+      <form id="submit-expense">
+        <select name="category" class="form-field">
+          <option>Category</option>
+          <option>Transportation</option>
+          <option>Bills</option>
+          <option>Fun</option>
+        </select>
+        <input type="text" name="description" placeholder="Expense Description" class="form-field">
+        <input type="number" name="cost" placeholder="Cost" class="form-field">
+        <input type="submit" value="Submit Expense">
+      </form>
+    </section>
+    <section id="expenses">
+      <section>
+        <p class="small">Highlight Expenses in Category:</p>
+        <select id="highlight-category">
+          <option></option>
+          <option>Transportation</option>
+          <option>Bills</option>
+          <option>Fun</option>
+        </select>
+      </section>
+      <table id="expenses-data">
+        <thead>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Cost</th>
+        </thead>
+        <tbody>
+          <tr class="bills">
+            <td>Bills</td>
+            <td>Rent</td>
+            <td>$1,000</td>
+          </tr>
+          <tr class="fun">
+            <td>Fun</td>
+            <td>Beer</td>
+            <td>$10,000</td>
+          </tr>
+          <tr class="transportation">
+            <td>Transportation</td>
+            <td>Metrocard</td>
+            <td>$100</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

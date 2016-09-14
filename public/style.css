@@ -1,0 +1,96 @@
+body, input {
+  font-family: 'Helvetica';
+}
+
+body {
+  margin: 20px;
+}
+
+body > section {
+  display: inline-block;
+  margin: 0px auto;
+  padding: 0 50px;
+  vertical-align: top;
+}
+
+section#create-expense {
+  width: 300px;
+}
+
+section#expenses {
+  width: 500px;
+  float: right;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 0 75px 0;
+}
+
+h2 {
+  background-color: #a3d16d;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+
+input, select {
+  font-size: 12px;
+  display: block;
+  margin: 20px auto;
+  padding: 5px 10px;
+  width: 80%;
+}
+
+input[type='submit'] {
+  background-color: #92b5d7;
+  border: 0px;
+  padding: 10px;
+}
+
+input[type='submit']:hover {
+  background-color: #6b95bd;
+  cursor: pointer;
+}
+
+
+table {
+  margin: 20px 0px;
+  width: 60%;
+  border-collapse: collapse;
+}
+
+table thead tr {
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  font-size: 13px;
+  font-weight: 400;
+  color: #92b5d7;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+table td {
+  color: #666;
+  font-size: 11px;
+  padding: 5px 10px;
+}
+
+.small {
+  font-size: 12px;
+  display: inline-block;
+}
+
+#highlight-category {
+  margin: 0px 5px;
+  display: inline-block;
+  width: 200px;
+}
+
+.highlighted {
+  background-color: #666;
+}
