@@ -1,4 +1,4 @@
-const loadExpenses = () => {
+const getExpenses = () => {
   $.ajax({
     method: 'GET',
     dataType: 'json',
