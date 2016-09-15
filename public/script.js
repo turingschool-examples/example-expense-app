@@ -5,10 +5,23 @@ const getExpenses = () => {
     url: '/expenses',
     success: function (data) {
       console.log('Expenses returned successfully!');
+      renderExpenses(data.expenses);
     },
     error: function (error) {
       console.error('There was some kind of error.');
     }
+  });
+};
+
+const renderExpenses = (expenses) => {
+  const tableBody = $('#expenses-data tbody');
+  expenses.forEach(expense => {
+    const tableRow = document.createElement('tr');
+    $(tableRow).addClass(expense.category);
+    $(tableRow).append(`<td>${expense.category}</td>`);
+    $(tableRow).append(`<td>${expense.description}</td>`);
+    $(tableRow).append(`<td>${expense.cost}</td>`);
+    tableBody.append(tableRow);
   });
 };
 
@@ -28,7 +41,7 @@ $('#submit-expense').on('submit', (e) => {
     data: data,
     success: function (data) {
       console.log('Expense was sent successfully.', data);
-      loadExpenses();
+      renderExpenses([data.expense]);
     },
     error: function (error) {
       console.error('There was some kind of error.', error);

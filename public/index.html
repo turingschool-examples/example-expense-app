@@ -15,9 +15,9 @@
       <form id="submit-expense">
         <select name="category" class="form-field">
           <option>Category</option>
-          <option>Transportation</option>
-          <option>Bills</option>
-          <option>Fun</option>
+          <option value="transportation">Transportation</option>
+          <option value="bills">Bills</option>
+          <option value="fun">Fun</option>
         </select>
         <input type="text" name="description" placeholder="Expense Description" class="form-field">
         <input type="number" name="cost" placeholder="Cost" class="form-field">
@@ -41,21 +41,6 @@
           <th>Cost</th>
         </thead>
         <tbody>
-          <tr class="bills">
-            <td>Bills</td>
-            <td>Rent</td>
-            <td>$1,000</td>
-          </tr>
-          <tr class="fun">
-            <td>Fun</td>
-            <td>Beer</td>
-            <td>$10,000</td>
-          </tr>
-          <tr class="transportation">
-            <td>Transportation</td>
-            <td>Metrocard</td>
-            <td>$100</td>
-          </tr>
         </tbody>
       </table>
     </section>
